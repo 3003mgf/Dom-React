@@ -1,0 +1,516 @@
+html{
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before{
+box-sizing: inherit;
+}
+
+body{
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body.dark{
+  background-color: #222;
+  color: whitesmoke;
+}
+
+body.light{
+  background-color: white;
+}
+
+textarea{
+  resize: none;
+}
+header{
+  background-color: rgb(175, 28, 77);
+  padding: 0.1rem;
+  position: sticky;
+  text-align: center;
+  color: whitesmoke;
+  text-align: center;
+  font-family: 'Raleway Dots', cursive;
+  font-size: 38px;
+}
+
+
+form{
+  text-align: center;
+  background-color: linen;
+  padding: 3rem;
+  border-radius: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 1.5rem lightgray;
+}
+form legend{
+  color: rgb(198, 55, 103);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 0.7cm;
+}
+form input[type='text']{
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  border: none;
+  color: #222;
+  box-shadow: 0 0 1rem lightgrey;
+  padding: 1rem;
+  width: 70%;
+}
+
+form textarea{
+  resize: none;
+  border-radius: 3rem;
+  text-align: center;
+  padding: 1rem;
+  border: none;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 1rem lightgrey;
+  color: rgb(188, 30, 83);
+}
+
+form input[type="submit"]{
+  border: none;
+  background-color: rgb(198, 55, 103);
+  color: white;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+form input[type="button"]{
+  border: none;
+  background-color: palevioletred;
+  color: white;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+form input[type='submit']:hover{
+  opacity: 0.9;
+}
+
+form span{
+  margin-bottom: 2rem;
+  width: fit-content;
+  background-color: palevioletred;
+  color: white;
+  padding-bottom: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+section{
+  min-height: 60vh;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.colision-article{
+display: flex;
+min-height: 50vh;
+background-color: rgb(121, 36, 64);
+}
+
+
+.colision-div{
+margin: auto;
+width: 4rem;
+height: 4rem;
+border-radius: 50%;
+background-color: whitesmoke;
+}
+
+.filter{
+  display: none;
+}
+
+
+.sliderContainer{
+  position: relative;
+  text-align: center;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.smart-video video{
+  width: 800px;
+  height: auto;
+}
+
+#section13 select{
+  border: none;
+  background-color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+}
+
+#section13 textarea{
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.5rem lightgray;
+}
+
+#section13 button{
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: peachpuff;
+  border-radius: 50px;
+  color: white;
+  margin-top: 1rem;
+}
+
+.sliders{
+position: relative;
+height: 400px;
+}
+
+.eachSlider{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.5s ease;
+}
+
+.eachSlider.active{
+  opacity: 1;
+  visibility: visible;
+}
+.sliderButtons{
+position: absolute;
+display: flex;
+width: 100%;
+top: 40%;
+justify-content: space-between;
+}
+
+.buttons{
+color: palevioletred;
+display: block;
+text-decoration: none;
+border: none;
+background-color: transparent;
+font-size: 2cm;
+font-weight: light;
+cursor: pointer;
+}
+
+.buttons:hover{
+  opacity: 0.7;
+}
+
+
+.articleModal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  min-height: 100vh;
+  background-color: rgb(0, 0, 0, 30%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.divModal{
+  background-color: linen;
+  color: grey;
+  position: relative;
+  text-align: center;
+  min-width: 400px;
+  min-height: 400px;
+  max-width: 400px;
+  max-height: 400px;
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.buttonModal{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: palevioletred;
+  color: white;
+  border-radius: 50%;
+}
+
+.buttonModal:hover{
+  opacity: 0.9;
+}
+
+
+.uploaderMain{
+  background-color: salmon;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 40vh;
+}
+
+.uploaderArticle{
+  color: palevioletred;
+  background-color: peachpuff;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 30vh;
+  width: 80%;
+  border: 0.1cm dotted palevioletred;
+  transition: all 0.3s ease-in-out;
+}
+
+.uploaderArticle.is-active{
+   background-color: lightsalmon;
+   color: peachpuff;
+   border: 0.1cm dashed palevioletred;
+   animation: pulse 1.5s infinite;
+   animation-timing-function: linear;
+}
+
+@keyframes pulse{
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+}
+
+
+.themeBtn{
+  position: fixed;
+  bottom: 1vh;
+  left: 1vw;
+  background-color: rgb(207, 94, 113);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.themeBtn.dark-mode-on{
+  background-color: rgb(243, 158, 172);
+}
+
+.hamburguer{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  z-index: 999;
+  background-color: salmon;
+  color: whitesmoke;
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
+  cursor: pointer;
+}
+
+.hamburguer span{
+  font-size: 1cm;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.scrollBtn{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  background-color: lightcoral;
+  color: linen;
+  position: fixed;
+  bottom: 1vh;
+  right: calc(4.25rem + 1.5vw);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.scrollBtn span{
+  font-size: 1.3cm;
+}
+
+.scrollBtn:hover{
+  animation: pulse 1.5s infinite linear;
+}
+
+.asidePanel{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  z-index: 998;
+  background-color: rgb(0, 0, 0, 50%);
+  opacity: 0;
+  transition: transform .5s ease, opacity .5s ease;
+  transform: translate(0%, 100%);
+  width: 100%;
+}
+
+.asidePanel.is-active{
+transform: translate(0, 0);
+opacity: 1;
+}
+
+.navPanel{
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+
+.navPanel a{
+  width: inherit;
+  display: block;
+  padding: 2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 0.5cm;
+  transition: all 0.1s ease;
+  border-radius: 2rem;
+}
+
+.navPanel a:hover{
+  background-color: peachpuff;
+  color: #222;
+}
+
+
+@media screen and (min-width: 1024px){
+.main-div{
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-template-rows: 5.2rem auto;
+    grid-template-areas: "header header" "main panel";
+  }
+
+main.main{
+    grid-area: main;
+  }
+
+.header{
+  grid-area: header;
+  font-size: 20px;
+}
+
+.asidePanel{
+  grid-area: panel;
+  position: sticky;
+  top: 0.1rem;
+  transform: translate(0, 0%);
+  opacity: 1;
+  justify-content: start;
+  align-self: baseline;
+  border-bottom-left-radius: 3rem;
+  border-top-left-radius: 3rem;
+}
+
+
+
+.navPanel{
+  justify-content: start;
+}
+
+.navPanel a{
+  padding: 1.2rem;
+  font-size: 1rem;
+}
+
+.navPanel a.is-active{
+  background-color: peachpuff;
+  color: #222;
+}
+
+
+.scrollBtn{
+  right: initial;
+  left: calc(4.25rem + 1.5vw);
+}
+
+.hamburguer{
+  display: none;
+}
+
+}
+
+
+.geo-ul{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.geo-ul ul{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+  gap: 10px;
+  width: fit-content;
+}
+
+
+.cards{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

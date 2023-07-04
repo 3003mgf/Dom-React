@@ -43,7 +43,7 @@ useEffect(() => {
         <aside className={`asidePanel ${panelState && "is-active"}`} ref={refAside}>
             <nav className="navPanel" ref={refNav}>
                 <a href="#section1" id="panel-a">Watch & Alarm</a>
-                <a href="#section2" id="panel-a">Colision</a>
+                <a href="#section2" id="panel-a">Collision</a>
                 <a href="#section3" id="panel-a">Regresive Counter</a>
                 <a href="#section4" id="panel-a">Responsive Design</a>
                 <a href="#section5" id="panel-a">Responsive Tester</a>

@@ -23,6 +23,7 @@ const Watch = () => {
 
     return ( 
         <section style={{textAlign: "center"}} id="section1">
+            <h2>Watch & Alarm</h2>
             <div>{showDate && date}</div>
             <br/>
             <button onClick={()=> setShowDate(true)}>Start Watch</button>

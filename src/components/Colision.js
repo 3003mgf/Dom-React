@@ -69,7 +69,7 @@ const Colision = () => {
 
     return ( 
         <section id="section2">
-            <h2>Colision</h2>
+            <h2>Collision</h2>
         <article className="colision-article" ref={refArticle}>
             <div className="colision-div" ref={refDiv}></div>
         </article>
